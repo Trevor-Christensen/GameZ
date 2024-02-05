@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ChatBox from "../ChatBox/ChatBox";
 import "./Header.scss";
+import ChatPage from "../../pages/ChatPage/ChatPage";
 
 const Header = ({ token, onLogout }) => {
   return (
@@ -43,7 +43,7 @@ const Header = ({ token, onLogout }) => {
               <Link to="/login">
                 <i className="fas fa-sign-in-alt"></i> Login
               </Link>
-              <Link to="/register">
+              <Link to="/RegisterForm">
                 <i className="fas fa-user-plus"></i> Register
               </Link>
             </>
@@ -52,7 +52,7 @@ const Header = ({ token, onLogout }) => {
 
         {token && (
           <div className="chat-room">
-            <ChatBox />
+            <ChatPage />
           </div>
         )}
       </nav>

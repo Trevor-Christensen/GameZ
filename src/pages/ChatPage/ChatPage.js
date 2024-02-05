@@ -23,7 +23,7 @@ const Chatpage = () => {
 
       <div>
         <form>
-          <input name="message" on change={(e) => setMessage(e.target.value)} />
+          <input name="message" onChange={(e) => setMessage(e.target.value)} />
         </form>
       </div>
     </div>

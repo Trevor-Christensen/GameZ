@@ -11,6 +11,9 @@ import LoginForm from "./components/Authentication/LoginForm/LoginForm";
 import RegisterForm from "./components/Authentication/RegisterForm/RegisterForm";
 import "./App.css";
 import Chatpage from "./pages/ChatPage/ChatPage";
+import ActionShooter from "./pages/ActionShooterPage/ActionShooterPage";
+import Adventure from "./pages/AdventurePage/Adventure";
+import Sports from "./pages/SportsPage/Sports";
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem("token") || null);
@@ -33,21 +36,11 @@ const App = () => {
     }
   }, []);
 
-  // Protected route component
-  const ProtectedRoute = ({ component: Component, ...rest }) => (
-    <Route
-      {...rest}
-      render={(props) =>
-        token ? <Component {...props} /> : <Navigate to="/login" />
-      }
-    />
-  );
-
   return (
     <BrowserRouter>
       <Header token={token} onLogout={handleLogout} />
       <Routes>
-        <Route path="/" exact component={Chatpage} />
+        <Route path="/" element={<Chatpage />} />
 
         {/* Public routes */}
         <Route
@@ -66,6 +59,18 @@ const App = () => {
               <RegisterForm onRegister={handleLogin} />
             )
           }
+        />
+
+        <Route
+          path="/action-shooter"
+          element={<ActionShooter onRegister={handleLogin} />}
+        />
+
+        <Route path="/sports" element={<Sports onRegister={handleLogin} />} />
+
+        <Route
+          path="/adventure"
+          element={<Adventure onRegister={handleLogin} />}
         />
       </Routes>
     </BrowserRouter>

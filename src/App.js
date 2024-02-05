@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
+  Routes,
   Route,
   Switch,
-  Redirect,
+  Navigate,
 } from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import Profile from "./components/Profile";
-import LoginForm from "./components/Auth/LoginForm";
-import RegisterForm from "./components/Auth/RegisterForm";
+import Header from "./components/Header/Header";
+import LoginForm from "./components/Authentication/LoginForm/LoginForm";
+import RegisterForm from "./components/Authentication/RegisterForm/RegisterForm";
 import "./App.css";
+import Chatpage from "./pages/ChatPage/ChatPage";
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem("token") || null);
@@ -38,36 +38,37 @@ const App = () => {
     <Route
       {...rest}
       render={(props) =>
-        token ? <Component {...props} /> : <Redirect to="/login" />
+        token ? <Component {...props} /> : <Navigate to="/login" />
       }
     />
   );
 
   return (
-    <Router>
+    <BrowserRouter>
       <Header token={token} onLogout={handleLogout} />
-
-      <Switch>
-        <Route path="/" exact component={Home} />
+      <Routes>
+        <Route path="/" exact component={Chatpage} />
 
         {/* Public routes */}
-        <Route path="/login">
-          {token ? <Redirect to="/" /> : <LoginForm onLogin={handleLogin} />}
-        </Route>
-        <Route path="/register">
-          {token ? (
-            <Redirect to="/" />
-          ) : (
-            <RegisterForm onRegister={handleLogin} />
-          )}
-        </Route>
+        <Route
+          path="/login"
+          element={
+            token ? <Navigate to="/" /> : <LoginForm onLogin={handleLogin} />
+          }
+        />
 
-        {/* Protected routes */}
-        <ProtectedRoute path="/profile" component={Profile} />
-
-        {/* Additional routes */}
-      </Switch>
-    </Router>
+        <Route
+          path="/RegisterForm"
+          element={
+            token ? (
+              <Navigate to="/" />
+            ) : (
+              <RegisterForm onRegister={handleLogin} />
+            )
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

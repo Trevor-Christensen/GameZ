@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ChatBox from "./ChatBox";
+import ChatBox from "../ChatBox/ChatBox";
 import "./Header.scss";
 
 const Header = ({ token, onLogout }) => {

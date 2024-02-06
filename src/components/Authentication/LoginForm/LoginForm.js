@@ -17,7 +17,6 @@ const LoginForm = ({ onRegister }) => {
       });
       const { token } = response.data;
       onRegister(token);
-      localStorage.setItem("token", token);
       alert("Sucessful Login");
     } catch (error) {
       console.error("Registration failed:", error);

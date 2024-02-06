@@ -21,8 +21,7 @@ const RegisterForm = ({ onRegister }) => {
       );
       const { token } = response.data;
       onRegister(token);
-      localStorage.setItem("token", token);
-      alert("Sucessful Register");
+      alert("Successful Register");
     } catch (error) {
       console.error("Registration failed:", error);
     }

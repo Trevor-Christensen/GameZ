@@ -10,22 +10,22 @@ const Header = ({ token, onLogout }) => {
 
         <ul className="nav-links">
           <li>
-            <Link to="/action-shooter">
+            <Link className="nav__link-item" to="/action-shooter">
               <i className="fas fa-gamepad"></i> Action Shooter
             </Link>
           </li>
           <li>
-            <Link to="/sports">
+            <Link className="nav__link-item" to="/sports">
               <i className="fas fa-futbol"></i> Sports
             </Link>
           </li>
           <li>
-            <Link to="/adventure">
+            <Link className="nav__link-item" to="/adventure">
               <i className="fas fa-hiking"></i> Adventure
             </Link>
           </li>
           <li>
-            <Link to="/profile">
+            <Link className="nav__link-item" to="/profile">
               <i className="fas fa-user"></i> Profile
             </Link>
           </li>
@@ -39,11 +39,11 @@ const Header = ({ token, onLogout }) => {
             </>
           ) : (
             <>
-              <Link to="/login">
-                <i className="fas fa-sign-in-alt"></i> Login
+              <Link className="auth-link" to="/login">
+                <i className="nav-auth"></i> Login
               </Link>
-              <Link to="/RegisterForm">
-                <i className="fas fa-user-plus"></i> Register
+              <Link className="auth-link" to="/RegisterForm">
+                <i className="nav-auth"></i>/ Register
               </Link>
             </>
           )}

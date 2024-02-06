@@ -20,11 +20,13 @@ const ActionShooter = () => {
   return (
     <div className="games-container">
       <h2>Action Shooter Games</h2>
-      <ul>
+      <ul className="list-container">
         {actionShooterGames.map((game) => (
           <>
-            <li key={game.id}>{game.name}</li>
-            <img className="game-img" src={game.background_image}></img>
+            <div className="list-container--item">
+              <li key={game.id}>{game.name}</li>
+              <img className="game-img" src={game.background_image}></img>
+            </div>
           </>
         ))}
       </ul>

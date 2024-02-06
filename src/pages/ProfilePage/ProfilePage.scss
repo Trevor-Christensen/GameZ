@@ -1,0 +1,50 @@
+.profile-container {
+  display: flex;
+  max-width: 50rem;
+  margin: 2rem auto;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10rem;
+  padding-left: 35rem;
+
+  .friends-list {
+    width: 12.5rem;
+    background-color: #f0f0f0;
+    padding: 1.25rem;
+
+    h2 {
+      margin-bottom: 0.625rem;
+      font-size: 1.2rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        cursor: pointer;
+        margin-bottom: 0.3125rem;
+        padding: 0.625rem;
+        background-color: #ddd;
+        border-radius: 0.3125rem;
+
+        &:hover {
+          background-color: #ccc;
+        }
+      }
+    }
+  }
+
+  .profile-content {
+    flex: 1;
+    padding: 1.25rem;
+
+    h1 {
+      margin-bottom: 0.625rem;
+    }
+
+    p {
+      margin-bottom: 0.3125rem;
+    }
+  }
+}

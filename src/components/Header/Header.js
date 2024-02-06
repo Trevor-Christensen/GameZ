@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
-import ChatPage from "../../pages/ChatPage/ChatPage";
 
 const Header = ({ token, onLogout }) => {
   return (
     <header className="header">
       <nav className="nav">
-        <div className="logo">Your Logo</div>
+        <div className="logo"></div>
 
         <ul className="nav-links">
           <li>
@@ -49,12 +48,6 @@ const Header = ({ token, onLogout }) => {
             </>
           )}
         </div>
-
-        {token && (
-          <div className="chat-room">
-            <ChatPage />
-          </div>
-        )}
       </nav>
     </header>
   );

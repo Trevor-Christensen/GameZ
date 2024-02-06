@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./RegisterForm.scss";
 
 const RegisterForm = ({ onRegister }) => {
   const [username, setUsername] = useState("");
@@ -10,20 +11,25 @@ const RegisterForm = ({ onRegister }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("/api/auth/register", {
-        username,
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "http://localhost:8080/users/RegisterForm",
+        {
+          User_username: username,
+          User_email: email,
+          User_password: password,
+        }
+      );
       const { token } = response.data;
       onRegister(token);
+      localStorage.setItem("token", token);
+      alert("Sucessful Register");
     } catch (error) {
       console.error("Registration failed:", error);
     }
   };
 
   return (
-    <form onSubmit={handleRegister}>
+    <form className="form-container" onSubmit={handleRegister}>
       <label>Username:</label>
       <input
         type="text"

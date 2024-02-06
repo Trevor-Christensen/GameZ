@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
+import "./ChatRoom.scss";
 
 const ChatRoom = () => {
   const [socket, setSocket] = useState(null);
@@ -7,7 +8,7 @@ const ChatRoom = () => {
   const [newMessage, setNewMessage] = useState("");
 
   useEffect(() => {
-    const newSocket = io("http://localhost:8080"); // Replace with your server URL
+    const newSocket = io("http://localhost:8080");
     setSocket(newSocket);
 
     // Clean up the socket connection on component unmount

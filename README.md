@@ -99,17 +99,9 @@ List technologies that will be used in your app, including any libraries to save
 
 ### Sitemap
 
-- WelcomePage:
-  - Includes button to registor plus cool graphics
-- HomePage
-  - Form for registration (includes type of games a given user selects)
-  - Avatar choice
-  - Submit
-- Profile Page
-  - Grid layout of chosen game style
-  - Profile details, connections list, online or offline
-- ChatPage
-  - Place to chat with friends
+Register Page
+Api selection
+Profile page
 
 ### Mockups
 
@@ -165,7 +157,7 @@ POST /api/chat/:categoryId: Send a chat message
 
 ### Auth
 
-Does your project include any login or user profile functionality? If so, describe how authentication/authorization will be implemented.
+GameZ uses tokens to ask the backend if they are a new user or a returning user. The site will display a notifcation upon a sucessful 'login" or "register"
 
 ## Roadmap
 
@@ -201,14 +193,8 @@ Sprint 5: Finalization
 - Fine-tune UI and UX
 - Conduct thorough testing
 
-Sprint 6: Deployment and Documentation
-
-- Deploy the application
-- Document the codebase, API endpoints, and overall architecture
-- Prepare for final deliverable
-
 ## Nice-to-haves
 
-Your project will be marked based on what you committed to in the above document. Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
-Like discord, i would like to assign roles to a given user and have the ability to create another server.
-as a user, I want to choose between light and dark mode
+Search Bar to list specific games
+Personal DM's
+Deploy App

@@ -18,7 +18,7 @@ const ActionShooter = () => {
   }, []);
 
   return (
-    <div>
+    <div className="games-container">
       <h2>Action Shooter Games</h2>
       <ul>
         {actionShooterGames.map((game) => (

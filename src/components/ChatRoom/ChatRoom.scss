@@ -1,0 +1,56 @@
+// styles/ChatRoom.scss
+
+$primaryColor: #3498db;
+$secondaryColor: #2ecc71;
+$fontFamily: "Arial", sans-serif;
+$fontSize: 16px;
+
+.ChatRoom {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid $primaryColor;
+  border-radius: 8px;
+  background-color: #fff;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+
+    li {
+      background-color: $secondaryColor;
+      padding: 8px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      color: #fff;
+    }
+  }
+
+  input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid $primaryColor;
+    border-radius: 4px;
+    font-size: $fontSize;
+  }
+
+  button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    background-color: $primaryColor;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: $fontSize;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primaryColor, 10%);
+    }
+  }
+}

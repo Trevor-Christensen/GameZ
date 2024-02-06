@@ -14,6 +14,8 @@ import Chatpage from "./pages/ChatPage/ChatPage";
 import ActionShooter from "./pages/ActionShooterPage/ActionShooterPage";
 import Adventure from "./pages/AdventurePage/Adventure";
 import Sports from "./pages/SportsPage/Sports";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem("token") || null);
@@ -40,8 +42,6 @@ const App = () => {
     <BrowserRouter>
       <Header token={token} onLogout={handleLogout} />
       <Routes>
-        <Route path="/" element={<Chatpage />} />
-
         {/* Public routes */}
         <Route
           path="/login"
@@ -72,7 +72,13 @@ const App = () => {
           path="/adventure"
           element={<Adventure onRegister={handleLogin} />}
         />
+
+        <Route
+          path="/profile"
+          element={<ProfilePage onRegister={handleLogin} />}
+        />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

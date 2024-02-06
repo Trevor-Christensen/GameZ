@@ -1,7 +1,9 @@
+body {
+  margin: 0;
+}
 .header {
-  background-color: #4766b4;
+  background-color: #3498db;
   color: #fff;
-  padding: 10px;
 }
 
 .nav {
@@ -13,6 +15,12 @@
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  background-image: url("../../assets/download.png");
+  background-repeat: no-repeat;
+  width: 10%;
+  height: 6rem;
+  background-size: contain;
+  margin-left: 3rem;
 }
 
 .nav-links {
@@ -28,12 +36,14 @@
 .nav-links a {
   text-decoration: none;
   color: #fff;
+  padding-left: 2rem;
 }
 
 .user-actions {
   display: flex;
   gap: 10px;
   align-items: center;
+  padding-right: 6rem;
 }
 
 .user-actions button {

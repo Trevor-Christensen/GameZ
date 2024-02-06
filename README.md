@@ -18,21 +18,13 @@ Anyone is welcome to this app, however it is targeted for any and all gamers. Th
 
 List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
 
-- Responsive desgin (mobile, tablet, desktop)
 - User Auth
 - Game Categories (Shooter, Sports, Adventure-Open World)
 - Game Listings (Title, Genre, (maybe cover img) )
 - WebSocket-based Chat
-- API's
+- API
 
 ## Implementation
-
-1. Responsive Design:
-
-- Design separate layouts for mobile, tablet, and desktop views.
-- Use percentage-based widths and flexible grids for responsive layouts.
-- Optimize images and media for different screen resolutions.
-- Test thoroughly on various devices to ensure a consistent user experience.
 
 2. User Authentication:
 
@@ -42,14 +34,6 @@ List the functionality that your app will include. These can be written as user 
 - Authenticate users by verifying credentials against stored hashed passwords.
 - Issue a JWT upon successful login.
 - Secure routes by checking the validity of the JWT.
-
-3. Game Catagories:
-
-- Create a "Game" schema with attributes like title, description, category, cover image URL, etc.
-- Set up routes to retrieve games by category.
-- Categorize games based on the provided genres (Shooter, Sports, Adventure-Open World).
-- Create separate sections or pages for each game category.
-- Display games in a visually appealing way with relevant information.
 
 4. Game Listings:
 
@@ -117,18 +101,12 @@ Profile page
 
 ![](./assests/ProfilePage.png)
 
-#### Chat Room Page
-
-![](./assests/ChatRoom.png)
-
 ### Data
 
 - Users:
   - User ID, username, email, password hash, avatar, bio
 - Games:
   - Game ID, title, description, category, cover image
-- Friendships:
-  - Sender ID, receiver ID, status (pending, accepted)
 - Chat Messages:
   - Message ID, sender ID, receiver ID, content, timestamp
 
@@ -196,5 +174,7 @@ Sprint 5: Finalization
 ## Nice-to-haves
 
 Search Bar to list specific games
+Addding Friends and storing them with profile data
 Personal DM's
 Deploy App
+Responsive Design

@@ -76,6 +76,7 @@ List technologies that will be used in your app, including any libraries to save
   - WebSocket
   - SQL (database)
   - Password Hash (OR JWT Tokens)
+  - RAWG Video Games Database API (for game data)
 
 ### APIs
 

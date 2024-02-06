@@ -6,9 +6,9 @@ const ProfilePage = () => {
   const [selectedFriend, setSelectedFriend] = useState(null);
 
   const friendsData = [
-    { id: 1, name: "Bob", details: "Likes Cats" },
-    { id: 2, name: "Dreamy", details: "Ejoys walks on the beach" },
-    { id: 3, name: "Kim", details: "CANT BE TRUSTED!" },
+    { name: "Bob", details: "Likes Cats" },
+    { name: "Dreamy", details: "Ejoys walks on the beach" },
+    { name: "Kim", details: "CANT BE TRUSTED!" },
   ];
 
   const handleFriendClick = (friend) => {
@@ -33,7 +33,7 @@ const ProfilePage = () => {
         {selectedFriend ? (
           <>
             <h1>{selectedFriend.name}</h1>
-            <p>ID: {selectedFriend.id}</p>
+
             <p>Details: {selectedFriend.details}</p>
           </>
         ) : (

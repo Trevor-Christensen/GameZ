@@ -1,5 +1,28 @@
+@use "../../styles/Partials/fonts.scss" as *;
+
+body {
+  font-family: GameZF;
+}
 .game-img {
   width: 8rem;
   height: 6rem;
   object-fit: contain;
+  filter: grayscale(1);
+  &:hover {
+    filter: none;
+  }
+}
+.sports-list-item {
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+  width: 12rem;
+  font-size: 1.5rem;
+}
+.items-container {
+  display: flex;
+  flex-direction: column;
+}
+.sports-title {
+  font-size: 2.5rem;
 }

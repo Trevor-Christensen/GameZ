@@ -19,13 +19,17 @@ const Sports = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Sports Games</h2>
-      <ul>
+    <div className="sports-container">
+      <h2 className="sports-title">Sports Games</h2>
+      <ul className="list-container">
         {sportsGames.map((game) => (
           <>
-            <li key={game.id}>{game.name}</li>
-            <img className="game-img" src={game.background_image}></img>
+            <div className="sports-items-container">
+              <li className="sports-list-item" key={game.id}>
+                {game.name}
+              </li>
+              <img className="game-img" src={game.background_image}></img>
+            </div>
           </>
         ))}
       </ul>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getGames } from "../../components/API/rawgApi";
+import "./AdventurePage.scss";
 
 const Adventure = () => {
   const [adventureGames, setAdventureGames] = useState([]);
@@ -19,12 +20,16 @@ const Adventure = () => {
 
   return (
     <div>
-      <h2>Adventure Games</h2>
-      <ul>
+      <h2 className="adventure-title">Adventure Games</h2>
+      <ul className="adventure-list-container">
         {adventureGames.map((game) => (
           <>
-            <li key={game.id}>{game.name}</li>
-            <img className="game-img" src={game.background_image}></img>
+            <div className="adventure-items-container">
+              <li className="adventure-list-item" key={game.id}>
+                {game.name}
+              </li>
+              <img className="game-img" src={game.background_image}></img>
+            </div>
           </>
         ))}
       </ul>
